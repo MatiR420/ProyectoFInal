@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import 'variables';
+@import 'nosotros';
+@import 'cafes';
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+/* utilidades */
+.container{
+    max-width: 90rem;
+    margin: 0 auto;
+
+}
+/* HEADER */
+.container-hero{
+    background-color: $background-color;  
+
+    .hero{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 0;
+}
+}
+
+.customer-support{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    i{
+        font-size: 2rem;
+    }
+    .content-customer-support{
+        display: flex;
+        flex-direction: column;
+        span{
+            font-size: 0.9rem;
+            
+        }
+    }
+}
+    .animate__animated {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+    }
+    i{
+        font-size: 2.3rem;
+    }
+    .animate__animated {            
+            animation:slideInDown; 
+            animation-duration: 5s;
+
+            }
+                .logo a{
+                        text-decoration: none;
+                        color: black;
+                        text-transform: uppercase;
+                        letter-spacing: -1px;
+        }
+        
+    .container-user{
+        display: flex;
+        gap: 1rem;
+        cursor: pointer;
+
+                .fa-user{
+            font-size: 2.3rem;
+            color: $primary-color;
+            padding-right: 2.5rem; 
+            border-right: 1px solid #e2e2e2;
+        }
+    }
+    .container-user{
+        .fa-basket-shopping{
+            font-size: 2.3rem;
+            color: $primary-color;
+            padding-left: 1rem;
+        }
+    }
+    .container-carrito{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* NAVBAR */
+    .container-navbar{
+        background-color: $primary-color;
+
+            .navbar{
+                    max-width: 90rem;
+                    margin: 0 auto;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-wrap: wrap;
+        }
+            
+            .navbar .fa-bars{
+                display: none;
+            }
+    }
+
+    .menu{
+        display: flex;
+        gap: 2rem;
+
+    }
+            li{
+                list-style: none;;
+            }
+            a{
+                text-decoration: none;
+                font-size: 1.3rem;
+                color: $dark-color;
+                text-transform: uppercase;
+                position: relative;
+                font-weight: 500;
+        }
+
+    .menu a::after{
+        content: '';
+        position: absolute;
+        width: 1.5rem;
+        height: 1px;
+        background-color: $light-color;
+        bottom: -3px;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        opacity: 0;
+        transition: all 3s ease;
+    }
+        .menu a:hover::after{
+        opacity: 1;
+    }
+        a:hover{
+            color: $light-color;
+        }
+
+        .search-form{
+            position: relative;
+            display: flex;
+            align-items: center;
+            border: 2px solid $light-color;
+            border-radius: 20px;
+            background-color: $light-color;
+            height: 4.4rem;
+            overflow: hidden;
+
+                input{
+                    border: none;
+                    outline: none;
+                    font-family: inherit;
+                    padding: 0 2rem;
+                    font-size: 1.4rem;
+                    width: 15rem;
+                    color: #777;
+                    cursor: pointer;
+            }
+                .btn-search{
+                    border: none;
+                    background-color: $primary-color;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+                    padding: 1rem;
+                }
+                i{
+                    font-size: 1.3rem;
+                    color: $light-color;
+                }
+    }
+/**resonsive moviles*/
+@media (max-width: 768px) {
+    .container-navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+
+    }
+    .navbar ul{
+        flex-direction: column;
+        width: 100%;
+    }
+    .search-form{
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+
+    /*BANNER*/
+.banner{
+    background-image:linear-gradient(100deg,#000000, #00000020 ), url(../img/banner.jpg);
+    height: 60rem;
+    background-size: cover;
+    background-position: center;
+}
+
+.content-bannner{
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 25rem 0;
+
+
+        p{
+            color: $primary-color;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+    }
+        h2{
+            color: $light-color;
+            font-size: 2.5rem;
+            font-weight: 500;
+            line-height: 1.2;
+    }
+        a{
+            margin-top: 2rem;
+            text-decoration: none;
+            color: $light-color;
+            background-color: $primary-color;
+            display: inline-block;
+            padding: 1rem 3rem;
+            text-transform: uppercase;
+            border-radius: 3rem;
+        }
+}
+/* MAIN CONTENT */
+.main-content{
+    background-color: $background-color;
+}
+/* FEATURES */
+.container-features{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    padding: 3rem 0;
+}            
+    .card-feature{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        background-color: $light-color;
+        border-radius: 1rem;
+        padding: 1.5rem 0;
+
+            i{
+                font-size: 2.7rem;
+                color: $primary-color;
+            }
+    }
+    .feature-content{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+            span{
+                font-weight: 700;
+                font-size: 1.2;
+                color: $dark-color;
+            }
+
+            p{
+                color: #777;
+                font-weight: 500;
+            }
+    }
+/**categorias de cafes**/
+
+.top-products{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 50px;
+}
+
+.heading-1{
+    font-size: 2.5rem;
+    color:$dark-color;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: -1px;
+
+}
+

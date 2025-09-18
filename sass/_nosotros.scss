@@ -1,0 +1,21 @@
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+.content-nosotros {
+        background-image:linear-gradient(100deg,#000000, #00000020 ), url(../img/banner.jpg);
+    height: 23rem;
+    background-size: cover;
+    background-position: center;
+
+                h1{
+                    color: $light-color;
+                    font-size: 2.2rem;
+                    margin-bottom: 1.5rem;
+                    font-weight: 700;
+                    text-align: center;
+                    padding: 10rem 0;
+        }
+    }
+
+
