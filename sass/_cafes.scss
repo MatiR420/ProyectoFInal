@@ -59,3 +59,19 @@
     border-radius: 6px;
   }
 }
+
+.top-products{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 50px;
+}
+
+.heading-1{
+    font-size: 2.5rem;
+    color:$dark-color;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: -1px;
+
+}
